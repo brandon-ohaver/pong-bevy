@@ -11,7 +11,7 @@
 * Need to make controls for player DONE
 * Need to make ball move/learn game physics?
 * Need to create collision with player/opponent sprites
-* Need to make "walls" for ball to hit so it doesn't leave screen
+* Need to make "walls" for ball to hit so it doesn't leave screen DONE
 * Need to create opponent movement/AI
 * Need to add scoring/point tracking
 * Need to add spawn/despawn logic for the ball when it is scored
