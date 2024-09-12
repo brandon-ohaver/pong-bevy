@@ -7,7 +7,7 @@ struct Player;
 struct Ball;
 
 #[derive(Component)]
-struct Zone;
+struct Wall;
 
 fn main() {
     App::new()
@@ -34,9 +34,14 @@ fn setup(mut commands: Commands, asset_server: Res<AssetServer>) {
         transform: Transform::from_xyz(0.0, 0.0, 0.0),
         ..default()
     }));
-    // need to spawn zone walls entity here
-    commands.spawn((Zone, SpriteBundle {
-        texture:asset_server.load("zone.png"),
+    // may want to separate the wall sprites if collision becomes too difficult to figure out with
+    // the "zone" being one total sprite
+    commands.spawn((Wall, SpriteBundle {
+        texture:asset_server.load("left-wall.png"),
+        ..default()
+    }));
+    commands.spawn((Wall, SpriteBundle {
+        texture:asset_server.load("right-wall.png"),
         ..default()
     }));
 }
